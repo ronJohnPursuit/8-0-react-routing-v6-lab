@@ -9,6 +9,7 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
+import PetError from "./components/pets/PetError";
 
 /*
   Data
@@ -42,6 +43,10 @@ function App() {
           <Route
             path="/pets/dogs"
             element={<PetsList pets={pets} kind={"dogs"} />}
+          />
+          <Route
+            path="/pets/*"
+            element={<PetError pets={pets} kind={"dogs"} />}
           />
         </Routes>
         <Footer />
